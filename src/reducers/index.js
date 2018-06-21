@@ -31,10 +31,18 @@ export const gameReducer = (state=initialState, action) => {
         }
 
         document.title = feedback ? `${feedback} | Hot or Cold` : 'Hot or Cold';
-        
+
         return Object.assign({}, state, {
             guesses: [...state.guesses, action.guess],
             feedback
+        });
+    }
+    else if (action.type === actions.RESTART_GAME) {
+        return Object.assign({}, state, {
+            guesses: [],
+            feedback: 'Make your guess!',
+            auralStatus: '',
+            correctAnswer: action.correctAnswer
         });
     }
     return state;
