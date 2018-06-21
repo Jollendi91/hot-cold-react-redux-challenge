@@ -44,7 +44,6 @@ export default class Game extends React.Component {
     return (
       <div>
         <Header
-          onRestartGame={() => this.restartGame()}
           onGenerateAuralUpdate={() => this.generateAuralUpdate()}
         />
         <main role="main">

@@ -42,7 +42,7 @@ export const gameReducer = (state=initialState, action) => {
             guesses: [],
             feedback: 'Make your guess!',
             auralStatus: '',
-            correctAnswer: action.correctAnswer
+            correctAnswer: Math.floor(Math.random() * 99) + 1 
         });
     }
     return state;
